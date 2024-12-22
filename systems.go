@@ -8,7 +8,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/vector"
 )
 
-func renderNode(s *ebiten.Image, node UiNode) {
+func RenderNode(s *ebiten.Image, node UiNode) {
 	rect := node.GetRect()
 	vector.DrawFilledRect(
 		s,
@@ -25,6 +25,6 @@ func renderNode(s *ebiten.Image, node UiNode) {
 		ebitenutil.DebugPrintAt(s, text, rect.Min.X, rect.Min.Y+fontSize)
 	}
 	for _, child := range node.GetChildren() {
-		renderNode(s, child)
+		RenderNode(s, child)
 	}
 }
