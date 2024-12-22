@@ -1,4 +1,4 @@
-module github.com/CyberTea0X/ebiui.git
+module github.com/CyberTea0X/ebiui
 
 go 1.23.4
 
