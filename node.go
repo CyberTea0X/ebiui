@@ -36,6 +36,9 @@ func (n Node) Position() image.Point {
 
 func (n Node) CalcValue(sVal StyleValue) int {
 	value := n.Style.getValue(sVal)
+	if value == nil {
+		return 0
+	}
 	switch {
 	case value.Px != nil:
 		return *value.Px
